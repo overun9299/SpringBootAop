@@ -29,6 +29,8 @@ public class CarServiceImpl implements CarService {
             result.put("msg" , "请输入正确参数");
         }
 
+        System.out.println("方法内打印-"+car.toString());
+
         return JSONObject.toJSONString(result);
     }
 }

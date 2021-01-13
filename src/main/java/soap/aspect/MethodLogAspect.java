@@ -42,10 +42,11 @@ public class MethodLogAspect {
         for (Object arg : args) {
             Car car = (Car) arg;
             System.out.println(car.toString());
+            car.setName("我被修改了");
         }
 
 
-        /** 出参 **/
+        /** 请求方法,并打印出参 **/
         result = pjp.proceed();
         System.out.println(result);
 
